@@ -115,7 +115,13 @@ namespace UP3Jazda
 
                 var obraz = (ImageFile)ZawartoscSkanera.Transfer();
 
-                var Path = @"C:\Users\obrazek.jpeg";
+                var Path = @"C:\obrazek.jpeg";
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    Path = saveFileDialog1.FileName;
+                }
+                    
 
                 if (File.Exists(Path))
                 {
