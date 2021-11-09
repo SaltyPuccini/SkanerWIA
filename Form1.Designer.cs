@@ -42,10 +42,14 @@ namespace UP3Jazda
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.PojemnikNaObraz = new System.Windows.Forms.PictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.JPG = new System.Windows.Forms.CheckBox();
+            this.PNG = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PojemnikNaObraz)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,12 +92,6 @@ namespace UP3Jazda
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.resLabel);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.trackBar1);
-            this.panel2.Controls.Add(this.checkBox3);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.PojemnikNaObraz);
             this.panel2.Location = new System.Drawing.Point(349, 12);
             this.panel2.Name = "panel2";
@@ -103,7 +101,7 @@ namespace UP3Jazda
             // resLabel
             // 
             this.resLabel.AutoSize = true;
-            this.resLabel.Location = new System.Drawing.Point(31, 354);
+            this.resLabel.Location = new System.Drawing.Point(27, 47);
             this.resLabel.Name = "resLabel";
             this.resLabel.Size = new System.Drawing.Size(36, 17);
             this.resLabel.TabIndex = 13;
@@ -112,7 +110,7 @@ namespace UP3Jazda
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 324);
+            this.label2.Location = new System.Drawing.Point(6, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 12;
@@ -120,12 +118,12 @@ namespace UP3Jazda
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(156, 324);
+            this.trackBar1.Location = new System.Drawing.Point(109, 8);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.trackBar1.Maximum = 300;
             this.trackBar1.Minimum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(244, 56);
+            this.trackBar1.Size = new System.Drawing.Size(209, 56);
             this.trackBar1.TabIndex = 11;
             this.trackBar1.Value = 300;
             this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
@@ -133,7 +131,7 @@ namespace UP3Jazda
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(13, 438);
+            this.checkBox3.Location = new System.Drawing.Point(214, 77);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(82, 21);
             this.checkBox3.TabIndex = 10;
@@ -146,7 +144,7 @@ namespace UP3Jazda
             this.checkBox2.AutoSize = true;
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(13, 411);
+            this.checkBox2.Location = new System.Drawing.Point(136, 77);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(60, 21);
             this.checkBox2.TabIndex = 9;
@@ -157,7 +155,7 @@ namespace UP3Jazda
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(13, 384);
+            this.checkBox1.Location = new System.Drawing.Point(9, 77);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(121, 21);
             this.checkBox1.TabIndex = 8;
@@ -169,16 +167,56 @@ namespace UP3Jazda
             // 
             this.PojemnikNaObraz.Location = new System.Drawing.Point(3, 3);
             this.PojemnikNaObraz.Name = "PojemnikNaObraz";
-            this.PojemnikNaObraz.Size = new System.Drawing.Size(435, 308);
+            this.PojemnikNaObraz.Size = new System.Drawing.Size(435, 460);
             this.PojemnikNaObraz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PojemnikNaObraz.TabIndex = 0;
             this.PojemnikNaObraz.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.PNG);
+            this.panel3.Controls.Add(this.JPG);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.trackBar1);
+            this.panel3.Controls.Add(this.resLabel);
+            this.panel3.Controls.Add(this.checkBox1);
+            this.panel3.Controls.Add(this.checkBox2);
+            this.panel3.Controls.Add(this.checkBox3);
+            this.panel3.Location = new System.Drawing.Point(13, 241);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(321, 240);
+            this.panel3.TabIndex = 2;
+            // 
+            // JPG
+            // 
+            this.JPG.AutoSize = true;
+            this.JPG.Checked = true;
+            this.JPG.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.JPG.Location = new System.Drawing.Point(9, 141);
+            this.JPG.Name = "JPG";
+            this.JPG.Size = new System.Drawing.Size(57, 21);
+            this.JPG.TabIndex = 14;
+            this.JPG.Text = "JPG";
+            this.JPG.UseVisualStyleBackColor = true;
+            this.JPG.CheckedChanged += new System.EventHandler(this.JPG_CheckedChanged);
+            // 
+            // PNG
+            // 
+            this.PNG.AutoSize = true;
+            this.PNG.Location = new System.Drawing.Point(72, 141);
+            this.PNG.Name = "PNG";
+            this.PNG.Size = new System.Drawing.Size(60, 21);
+            this.PNG.TabIndex = 15;
+            this.PNG.Text = "PNG";
+            this.PNG.UseVisualStyleBackColor = true;
+            this.PNG.CheckedChanged += new System.EventHandler(this.PNG_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 487);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -187,9 +225,10 @@ namespace UP3Jazda
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PojemnikNaObraz)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -209,6 +248,9 @@ namespace UP3Jazda
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label resLabel;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox PNG;
+        private System.Windows.Forms.CheckBox JPG;
     }
 }
 

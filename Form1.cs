@@ -19,6 +19,7 @@ namespace UP3Jazda
 
         int resolution = 300;
         int color_mode = 1;
+        string rozsz = ".JPEG";
 
         private static void AdjustScannerPictureSize(IItem scannerItem)
         {
@@ -120,6 +121,10 @@ namespace UP3Jazda
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     Path = saveFileDialog1.FileName;
+                    if (!(Path.Contains(".jpeg")|| Path.Contains(".JPEG")|| Path.Contains(".PNB")|| Path.Contains(".pnb")))
+                    {
+                        Path += rozsz;
+                    }
                 }
                     
 
@@ -186,6 +191,25 @@ namespace UP3Jazda
         {
             resolution = trackBar1.Value;
             resLabel.Text = trackBar1.Value.ToString();
+        }
+
+
+        private void PNG_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PNG.Checked == true)
+            {
+                JPG.Checked = false;
+                rozsz = ".PNG";
+            }
+        }
+
+        private void JPG_CheckedChanged(object sender, EventArgs e)
+        {
+            if (JPG.Checked == true)
+            {
+                PNG.Checked = false;
+                rozsz = ".JPEG";
+            }
         }
     }
 }
